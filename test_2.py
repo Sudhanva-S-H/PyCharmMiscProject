@@ -1,7 +1,7 @@
 import galois
 
 # Define GF(2^6) with power representation
-GF = galois.GF(2 ** 6, repr="power")
+GF = galois.GF(2 ** 12, repr="power")
 
 # Get the representation table as a string and save it to a file
 repr_table = GF.repr_table(sort="power")
@@ -60,8 +60,10 @@ inverse_power1, inverse_poly1 = get_power_and_polynomial_by_integer(int(inverse_
 inverse_power2, inverse_poly2 = get_power_and_polynomial_by_integer(int(inverse_elem2), lines) if elem2 != 0 else (
 "No inverse", "No inverse")
 
-# Print results
+''''# Print results
 print(f"\nSum (GF Computation): {sum_result} → Power: {sum_power}, Polynomial: {sum_poly}")
 print(f"Product (GF Computation): {product_result} → Power: {product_power}, Polynomial: {product_poly}")
-print(f"Inverse of x^{power1}: {inverse_power1}, Polynomial: {inverse_poly1}")
-print(f"Inverse of x^{power2}: {inverse_power2}, Polynomial: {inverse_poly2}")
+#print(f"Inverse of x^{power1}: {inverse_power1}, Polynomial: {inverse_poly1}")
+#print(f"Inverse of x^{power2}: {inverse_power2}, Polynomial: {inverse_poly2}")'''
+print(f"\nPower: {sum_power}, Polynomial: {sum_poly}")
+print(f"Power: {product_power}, Polynomial: {product_poly}")
